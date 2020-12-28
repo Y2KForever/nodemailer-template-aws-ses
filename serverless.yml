@@ -1,0 +1,31 @@
+
+
+service: email-portfolio-template
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-central-1
+  stackName: email-portfolio-template
+
+functions:
+  sendEmail:
+    handler: api/email.send
+    memorySize: 128
+    description: Sends emailtemplates from portfolio
+    events:
+      - http:
+          path: send
+          method: post
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false

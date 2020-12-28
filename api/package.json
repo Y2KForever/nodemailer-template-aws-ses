@@ -1,0 +1,16 @@
+{
+  "name": "nodemailer-template",
+  "version": "1.0.0",
+  "description": "Templates in nodemailer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.6",
+    "nodemailer": "^6.4.17",
+    "nodemailer-smtp-transport": "^2.7.4"
+  }
+}
